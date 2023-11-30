@@ -5,12 +5,9 @@ public class box : MonoBehaviour
     public float freezeDuration;
     float timer = 0;
 
-    private Rigidbody rb;
-
     public void Freeze()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.isKinematic = true;
+        GetComponent<Rigidbody>().isKinematic = true;
         transform.parent = FindObjectOfType<Wagen>().gameObject.transform;
         timer = freezeDuration;
     }
@@ -26,7 +23,7 @@ public class box : MonoBehaviour
 
     public void Unfreeze()
     {
-        rb.isKinematic = false;
+        GetComponent<Rigidbody>().isKinematic = false;
         transform.SetParent(null);
     }
 }
