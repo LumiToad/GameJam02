@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Ressources : MonoBehaviour
 {
     private static Ressources instance;
+    public static UnityEvent PointChanged = new UnityEvent();
    
     public static Ressources Instance
     {
@@ -40,6 +42,7 @@ public class Ressources : MonoBehaviour
             if(randomPoint != exception)
             {
                 randomPoint.gameObject.SetActive(true);
+                PointChanged?.Invoke();
                 return;
             }
         }
