@@ -44,7 +44,7 @@ public class UI : MonoBehaviour
         IEnumerator t()
         {
             canvas.gameObject.SetActive(true);
-            yield return new WaitForSeconds(1.25f);
+            yield return new WaitForSeconds(2f);
             canvas.gameObject.SetActive(false);
         }
     }
