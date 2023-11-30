@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Wagen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    Rigidbody rb;
+
+    private void Awake()
     {
-        
+        rb = GetComponent<Rigidbody>();
+        rb.maxAngularVelocity = 2;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        ResetAngular();
+    }
+
+    private void ResetAngular()
+    {
+        rb.angularVelocity = Vector3.MoveTowards(rb.angularVelocity, Vector3.zero, 0.01f);
     }
 }
