@@ -15,6 +15,7 @@ public class Car : MonoBehaviour
     public float turnSpeed = 0.1f;
 
     private float currentAngle = 0;
+    private float angleReset = 0.5f;
 
     private void FixedUpdate()
     { 
@@ -46,5 +47,7 @@ public class Car : MonoBehaviour
 
         frontLeft.steerAngle = currentAngle;
         frontRight.steerAngle = currentAngle;
+
+        currentAngle += (currentAngle < 0.0f) ? angleReset : -angleReset;
     }
 }
