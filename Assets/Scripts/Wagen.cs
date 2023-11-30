@@ -9,16 +9,16 @@ public class Wagen : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        rb.maxAngularVelocity = 2;
+        rb.maxAngularVelocity = 1;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         ResetAngular();
     }
 
     private void ResetAngular()
     {
-        rb.angularVelocity = Vector3.MoveTowards(rb.angularVelocity, Vector3.zero, 0.01f);
+        rb.angularVelocity = Vector3.MoveTowards(rb.angularVelocity, Vector3.zero, 1.0f);
     }
 }

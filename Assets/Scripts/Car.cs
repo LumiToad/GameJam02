@@ -15,7 +15,7 @@ public class Car : MonoBehaviour
     public float turnSpeed = 0.1f;
 
     private float currentAngle = 0;
-    private float angleReset = 0.5f;
+    public float angleReset = 0.85f;
 
     private void FixedUpdate()
     { 
