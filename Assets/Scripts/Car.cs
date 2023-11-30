@@ -17,6 +17,10 @@ public class Car : MonoBehaviour
     private float currentAngle = 0;
     public float angleReset = 0.85f;
 
+
+    public float freezeCooldown;
+    private float freezeTimer = 0;
+
     private void FixedUpdate()
     { 
         if (Input.GetKey(KeyCode.W))
@@ -49,5 +53,19 @@ public class Car : MonoBehaviour
         frontRight.steerAngle = currentAngle;
 
         currentAngle += (currentAngle < 0.0f) ? angleReset : -angleReset;
+    }
+
+    private void Update()
+    {
+        freezeTimer -= Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Space) && freezeTimer < 0)
+        {
+            foreach(var box in FindObjectsOfType<box>())
+            {
+                freezeTimer = freezeCooldown;
+                box.Freeze();
+            }
+        }
     }
 }
