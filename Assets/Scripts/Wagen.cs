@@ -12,13 +12,17 @@ public class Wagen : MonoBehaviour
         rb.maxAngularVelocity = 1;
     }
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         ResetAngular();
     }
 
     private void ResetAngular()
     {
-        rb.angularVelocity = Vector3.MoveTowards(rb.angularVelocity, Vector3.zero, 1.0f);
+        Vector3 newAngularVelocity = rb.velocity;
+
+        newAngularVelocity.z = 0;
+
+        rb.angularVelocity = Vector3.MoveTowards(newAngularVelocity, Vector3.zero, 1.0f);
     }
 }
