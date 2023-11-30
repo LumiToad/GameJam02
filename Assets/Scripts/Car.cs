@@ -40,6 +40,7 @@ public class Car : MonoBehaviour
             backLeft.brakeTorque = breakForce;
             backRight.brakeTorque = breakForce;
         }
+
         if (Input.GetKey(KeyCode.A))
         {
             currentAngle = Mathf.Clamp(currentAngle - turnSpeed * Time.fixedDeltaTime, -turnAngle, turnAngle);
@@ -47,6 +48,19 @@ public class Car : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             currentAngle = Mathf.Clamp(currentAngle + turnSpeed * Time.fixedDeltaTime, -turnAngle, turnAngle);
+        }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            frontLeft.motorTorque = -acceleration;
+            frontRight.motorTorque = -acceleration;
+            backLeft.motorTorque = -acceleration;
+            backRight.motorTorque = -acceleration;
+
+
+            frontLeft.brakeTorque = 0;
+            frontRight.brakeTorque = 0;
+            backLeft.brakeTorque = 0;
+            backRight.brakeTorque = 0;
         }
 
         frontLeft.steerAngle = currentAngle;
