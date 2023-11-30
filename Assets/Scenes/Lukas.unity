@@ -1128,10 +1128,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2583478670567342740, guid: 63841c1264b15af4b9165728db91ca78,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2923032000588133358, guid: 63841c1264b15af4b9165728db91ca78,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007134480716286514, guid: 63841c1264b15af4b9165728db91ca78,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 3264590007381331991, guid: 63841c1264b15af4b9165728db91ca78,
         type: 3}
       propertyPath: m_Name
       value: Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 3840542851418935158, guid: 63841c1264b15af4b9165728db91ca78,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485961861522992608, guid: 63841c1264b15af4b9165728db91ca78,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8664555795930007893, guid: 63841c1264b15af4b9165728db91ca78,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8664555795930007893, guid: 63841c1264b15af4b9165728db91ca78,
         type: 3}
