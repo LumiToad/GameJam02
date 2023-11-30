@@ -23,6 +23,7 @@ public class Ressources : MonoBehaviour
     }
 
     public static List<ExitPoints> points = new List<ExitPoints>();
+    public static int listIndex = 0;
 
     public static void EnableRandomPoint(ExitPoints exception)
     {
@@ -38,11 +39,12 @@ public class Ressources : MonoBehaviour
 
         while (true)
         {
-            var randomPoint = points[Random.Range(0, points.Count)];
+            var randomPoint = points[listIndex];
             if(randomPoint != exception)
             {
                 randomPoint.gameObject.SetActive(true);
                 PointChanged?.Invoke();
+                listIndex++;
                 return;
             }
         }

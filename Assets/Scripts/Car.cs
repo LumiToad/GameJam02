@@ -22,16 +22,21 @@ public class Car : MonoBehaviour
     private float freezeTimer = 0;
 
     private void FixedUpdate()
-    { 
+    {
+        frontLeft.motorTorque = 0.0f;
+        frontRight.motorTorque = 0.0f;
+        backLeft.motorTorque = 0.0f;
+        backRight.motorTorque = 0.0f;
+
+        frontLeft.brakeTorque = 0.0f;
+        frontRight.brakeTorque = 0.0f;
+        backLeft.brakeTorque = 0.0f;
+        backRight.brakeTorque = 0.0f;
+
         if (Input.GetKey(KeyCode.W))
         {
             frontLeft.motorTorque = acceleration;
             frontRight.motorTorque = acceleration;
-
-            frontLeft.brakeTorque = 0;
-            frontRight.brakeTorque = 0;
-            backLeft.brakeTorque = 0;
-            backRight.brakeTorque = 0;
         }
         if (Input.GetKey(KeyCode.S))
         {
@@ -51,16 +56,10 @@ public class Car : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Q))
         {
-            frontLeft.motorTorque = -acceleration;
-            frontRight.motorTorque = -acceleration;
-            backLeft.motorTorque = -acceleration;
-            backRight.motorTorque = -acceleration;
-
-
-            frontLeft.brakeTorque = 0;
-            frontRight.brakeTorque = 0;
-            backLeft.brakeTorque = 0;
-            backRight.brakeTorque = 0;
+            frontLeft.motorTorque = -acceleration / 4.0f;
+            frontRight.motorTorque = -acceleration / 4.0f;
+            backLeft.motorTorque = -acceleration / 4.0f;
+            backRight.motorTorque = -acceleration / 4.0f;
         }
 
         frontLeft.steerAngle = currentAngle;

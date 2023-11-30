@@ -382,7 +382,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8141204025337925659}
-  - {fileID: 7465352029343821777}
+  - {fileID: 3739656893015239889}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6056420597214919648
@@ -703,6 +703,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5956215647942100823, guid: 63841c1264b15af4b9165728db91ca78,
+        type: 3}
+      propertyPath: m_text
+      value: "HOWDY! Such den n\xE4chsten Lieferpunkt!"
+      objectReference: {fileID: 0}
     - target: {fileID: 6485961861522992608, guid: 63841c1264b15af4b9165728db91ca78,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -727,7 +732,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4226897279795218995}
   m_SourcePrefab: {fileID: 100100000, guid: 63841c1264b15af4b9165728db91ca78, type: 3}
---- !u!1 &6447990473451636927 stripped
+--- !u!1 &937998950419663807 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3264590007381331991, guid: 63841c1264b15af4b9165728db91ca78,
     type: 3}
@@ -739,7 +744,7 @@ HingeJoint:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6447990473451636927}
+  m_GameObject: {fileID: 937998950419663807}
   m_ConnectedBody: {fileID: 4361212051546349500}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: -0.25, z: -2.34}
@@ -772,7 +777,7 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1000
   m_ConnectedMassScale: 1500
---- !u!4 &7465352029343821777 stripped
+--- !u!4 &3739656893015239889 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1418555140875925369, guid: 63841c1264b15af4b9165728db91ca78,
     type: 3}
