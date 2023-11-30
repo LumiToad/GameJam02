@@ -690,6 +690,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3007134480716286514, guid: 63841c1264b15af4b9165728db91ca78,
         type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007134480716286514, guid: 63841c1264b15af4b9165728db91ca78,
+        type: 3}
       propertyPath: m_Constraints
       value: 64
       objectReference: {fileID: 0}
@@ -768,15 +773,15 @@ HingeJoint:
   m_Limits:
     min: -30
     max: 30
-    bounciness: 0.1
-    bounceMinVelocity: 0.2
+    bounciness: 0.5
+    bounceMinVelocity: 0.1
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 1
   m_EnablePreprocessing: 1
   m_MassScale: 1000
-  m_ConnectedMassScale: 1500
+  m_ConnectedMassScale: 2000
 --- !u!4 &3739656893015239889 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1418555140875925369, guid: 63841c1264b15af4b9165728db91ca78,
